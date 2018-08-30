@@ -1,17 +1,18 @@
 package com.github.jitpack;
 
 /**
- * Hello world!
+ * Esto es una traducción
+ * Hola Mundo!
  *
  */
 public class App 
 {
     public static void main(String[] args)
     {
-        System.out.println(new App().greet("world"));
+        System.out.println(new App().greet("Mundo"));
     }
 
     public String greet(String name) {
-        return "Hello " + name;
+        return "Hola " + name;
     }
 }
