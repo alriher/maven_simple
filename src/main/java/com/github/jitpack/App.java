@@ -10,6 +10,7 @@ public class App
     public static void main(String[] args)
     {
             System.out.println(new App().greet("Mundo de las ramas"));
+            
 
     }
 
@@ -18,10 +19,12 @@ public class App
     }
     //esta clase no hace absolutamente nada mas que meter evidencias para sonar.
     public void claseInutil(){
+        int a=1;
+        String b;
 
         for(int i=0; i<100; i++){
             System.out.println(" ");
-            if(i ==null ){
+            if(i==null ){
                 //jamas se cumplirá esta condición
             }
             
