@@ -11,7 +11,7 @@ pipeline {
       }
       stage('FASE 2 SMC'){
         steps{
-          git 'https://github.com/apache/maven.git'
+          git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
         }
       }
       stage('FASE 2 ANALYSIS'){
