@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('FASE') {
       steps {
-        withSonarQubeEnv('My SonarQube Server') {
+        withSonarQubeEnv('local_sonar') {
       // requires SonarQube Scanner for Maven 3.2+
       bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
         }
