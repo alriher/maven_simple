@@ -11,7 +11,7 @@ pipeline {
       }
       stage('FASE 2 SMC'){
         steps{
-          git 'https://github.com/rtheunissen/foobar.git'
+          git 'https://github.com/apache/maven.git'
         }
       }
       stage('FASE 2 ANALYSIS'){
