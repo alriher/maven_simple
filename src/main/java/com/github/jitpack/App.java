@@ -9,10 +9,22 @@ public class App
 {
     public static void main(String[] args)
     {
-        System.out.println(new App().greet("Mundo de las ramas"));
+            System.out.println(new App().greet("Mundo de las ramas"));
+
     }
 
     public String greet(String name) {
         return "Hola " + name;
+    }
+    //esta clase no hace absolutamente nada mas que meter evidencias para sonar.
+    public void claseInutil(){
+
+        for(int i=0; i<100; i++){
+            System.out.println(" ");
+            if(i ==null ){
+                //jamas se cumplirá esta condición
+            }
+            
+        }
     }
 }
