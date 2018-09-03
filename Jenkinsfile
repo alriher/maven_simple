@@ -9,7 +9,7 @@ pipeline {
       stage('FASE 2 ANALYSIS'){
         steps{
           withSonarQubeEnv('SonarCloud'){
-            bat 'mvn sonar:sonar mvn sonar:sonar \
+            bat 'sonar:sonar mvn sonar:sonar \
   -Dsonar.projectKey=com.mycompany.app:my-app \
   -Dsonar.organization=mavesis-github \
   -Dsonar.host.url=https://sonarcloud.io \
