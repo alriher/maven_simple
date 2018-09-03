@@ -1,15 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('FASE 1') {
-      steps {
-        withSonarQubeEnv('local_sonar') {
-      // requires SonarQube Scanner for Maven 3.2+
-      bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-        }
-      }      
-      }
-      stage('FASE 2 SMC'){
+      stage('FASE 1 SMC'){
         steps{
           git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
         }
