@@ -8,7 +8,7 @@ pipeline {
       }
       stage('FASE 2 ANALYSIS'){
         steps{
-          withSonarQubeEnv('local_sonar'){
+          withSonarQubeEnv('SonarCloud'){
             bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
           }
         }
