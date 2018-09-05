@@ -3,16 +3,22 @@ pipeline {
   stages {
       stage('FASE 1 SMC'){
         steps{
+          echo'           ------------------------------------------------  COMENZANDO LA DESCARGA DEL PROYECTO  ------------------------------------------------                        '
           git 'https://github.com/jenkins-docs/simple-java-maven-app.git'
         }
       }
-      stage('FASE 2 ANALYSIS'){
+      stage('FASE 2 SMC'){
         steps{
+          echo'           ------------------------------------------------  COMENZANDO LA CONSTRUCCIÓN DEL PROYECTO  ------------------------------------------------                        '
+          bat 'mvn clean install'
+          archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
+        }
+      }
+      stage('FASE 3 ANALYSIS'){
+        steps{
+          echo'           ------------------------------------------------  COMENZANDO ANÁLISIS DEL PROYECTO   ------------------------------------------------                        '
+
           withSonarQubeEnv('local_sonar'){
-            //String branch
-            //branch = bat 'git branch'
-            def branch = bat'git branch'
-            println branch
             bat 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar -Dsonar.projectKey=com.mycompany.app:my-app -Dsonar.organization=mavesis-github -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=39acfca66c299343b8ac4427b69b5cb78db97cf1 -Dsonar.branch.name=release-R03092018'
           }
         }
