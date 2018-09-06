@@ -16,7 +16,7 @@ pipeline {
       }
       stage('FASE 3 ANALYSIS JUEVES'){
         steps{
-          String a = bat'git branch';
+          def a = bat'git branch';
           echo'           ------------------------------------------------  COMENZANDO ANÁLISIS DEL PROYECTO   ------------------------------------------------                        '
           
           println a;
