@@ -16,10 +16,9 @@ pipeline {
       }
       stage('FASE 3 ANALYSIS JUEVES'){
         steps{
-          def a = bat'git branch';
           echo'           ------------------------------------------------  COMENZANDO ANÁLISIS DEL PROYECTO   ------------------------------------------------                        '
           
-          println a;
+          echo BRANCH_NAME
 
           withSonarQubeEnv('local_sonar'){
             
