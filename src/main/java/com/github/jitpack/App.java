@@ -24,17 +24,19 @@ public class App
 
         for(int i=0; i<100; i++){
             System.out.println(" ");
-            if(i==null ){
+            if(i == 0 ){
                 //jamas se cumplirá esta condición
             }
         System.out.println("Code Smells a tope!!! ");
+        }
         
         for(int i=0; i<100; i++){
             System.out.println(" ");
-            if(i==null ){
+            if(i== 0 ){
             //jamas se cumplirá esta condición
                 }
             
+             }
         }
     }
-}
+
