@@ -15,7 +15,7 @@ public class App
     }
 
     public String greet(String name) {
-        return "Hola " + name;
+        return "Hola " + name
     }
     //esta clase no hace absolutamente nada más que meter evidencias para sonar.
     public void claseInutil(){
