@@ -1,4 +1,5 @@
 package com.github.jitpack;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -11,7 +12,9 @@ public class App
     public static void main(String[] args)
     {
         Logger logger = Logger.getLogger(App.class.getName());
-        logger.info(new App().greet("Mundo de las ramas"));
+        if (logger.isLoggable(Level.INFO)) {
+            logger.info(new App().greet("Mundo de las ramas"));
+        }
     }
 
     public String greet(String name) {
