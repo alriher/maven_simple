@@ -10,7 +10,6 @@ public class App
 {
     public static void main(String[] args)
     {
-        // System.out.println(new App().greet("Mundo de las ramas"));
         Logger logger = Logger.getLogger(App.class.getName());
         logger.info(new App().greet("Mundo de las ramas"));
     }
